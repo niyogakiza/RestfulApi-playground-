@@ -7,14 +7,16 @@ const environments = {};
 
 // Staging
 environments.staging = {
-    "PORT": 3000,
+    "HTTP_PORT": 3000,
+    "HTTPS_PORT": 3001,
     "ENV_NAME": 'staging'
 };
 
 // Production
 environments.production = {
-    "PORT": 5000,
-    "ENV_NAME": 'production'
+    "HTTP_PORT": 5000,
+    "HTTPS_PORT": 5001,
+    "ENV_NAME": 'production',
 };
 
 const currentEnvironments = typeof(process.env.NODE_ENV) === 'string' ? process.env.NODE_ENV.toLowerCase(): '';

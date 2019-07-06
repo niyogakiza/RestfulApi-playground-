@@ -7,4 +7,5 @@ Vanilla node.js
 - The api allows a signed-in user to use their token to create a new "check"
 - The api allows a signed-in user to edit or delete any of their checks
 - In the background, workers perform all the "checks: at the appropriate times, and send alerts to the users when a check changes its state from "up" to "down", or vice versa
+- command to generate ssl key for https : `openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem`
 

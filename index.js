@@ -1,9 +1,33 @@
 const http = require('http');
+const https = require('https');
 const url = require('url');
 const { StringDecoder } = require('string_decoder');
 const config = require('./config');
+const fs = require('fs');
 
-const server = http.createServer((req,res) => {
+// instantiate http server
+const httpServer = http.createServer((req,res) => {
+    unifiedServer(req, res)
+});
+
+// instantiate https server
+const httpsServerOptions = {
+    'key': fs.readFileSync('./https/key.pem'),
+    'cert': fs.readFileSync('./https/cert.pem')
+};
+const httpsServer = https.createServer(httpsServerOptions,(req,res) => {
+    unifiedServer(req, res)
+});
+
+const handlers = {};
+handlers.sample = (data, callback) => callback(406, { 'name': 'Sample handler'});
+handlers.notFound = (data, callback) => callback(404);
+const router = {
+    'sample': handlers.sample
+};
+
+// Server logic for https and http
+const unifiedServer = (req, res) => {
     const parsedUrl = url.parse(req.url,  true);
     const path = parsedUrl.pathname;
     const trimmedPath = path.replace(/^\/+|\/+$/g,'');
@@ -44,17 +68,14 @@ const server = http.createServer((req,res) => {
              `)
         });
     });
-});
-
-const handlers = {};
-handlers.sample = (data, callback) => callback(406, { 'name': 'Sample handler'});
-handlers.notFound = (data, callback) => callback(404);
-const router = {
-    'sample': handlers.sample
 };
 
-server.listen(config.PORT,() => {
-    console.log(`Server Listening on port ${config.PORT} in ${config.ENV_NAME}` )
+httpServer.listen(config.HTTP_PORT,() => {
+    console.log(`Server Listening on port ${config.HTTP_PORT} in ${config.ENV_NAME}` )
+});
+
+httpsServer.listen(config.HTTPS_PORT,() => {
+    console.log(`Server Listening on port ${config.HTTPS_PORT} in ${config.ENV_NAME}` )
 });
 
 
