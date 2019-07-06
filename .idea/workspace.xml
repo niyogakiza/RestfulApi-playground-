@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ff964c6-c1c6-4d2b-bee7-176aaae03e7d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+            <state relative-caret-position="709">
+              <caret line="51" column="2" lean-forward="true" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -36,6 +34,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>convertedPayload</find>
+      <find>handlers.sample</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>payloadToString</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -47,13 +54,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitgnore" />
         <option value="$PROJECT_DIR$/.eslintrc.js" />
+        <option value="$PROJECT_DIR$/.gitgnore" />
         <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="27" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
@@ -125,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562426018737</updated>
-      <workItem from="1562426020987" duration="3512000" />
+      <workItem from="1562426020987" duration="8481000" />
     </task>
     <task id="LOCAL-00001" summary="server up and running on localhost 3000">
       <created>1562428838149</created>
@@ -134,14 +141,28 @@
       <option name="project" value="LOCAL" />
       <updated>1562428838150</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Setup eslint - prettier &amp; method on output">
+      <created>1562429767438</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562429767438</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Parsing query string">
+      <created>1562430534372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562430534372</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3512000" />
+    <option name="totallyTimeSpent" value="8481000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="27" y="23" width="1280" height="730" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="730" extended-state="6" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
@@ -149,8 +170,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="2" sideWeight="0.49813432" visible="true" weight="0.93333334" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49813432" weight="0.55614036" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="2" sideWeight="0.49533582" visible="true" weight="0.7245614" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49533582" weight="0.8105263" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
@@ -159,7 +180,7 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" x="0" y="0" width="270" height="530" id="Documentation" order="12" sideWeight="0.5018657" side_tool="true" visible="true" weight="0.93333334" />
+      <window_info anchor="bottom" x="0" y="0" width="270" height="530" id="Documentation" order="12" sideWeight="0.5046642" side_tool="true" weight="0.4385965" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -170,7 +191,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="server up and running on localhost 3000" />
-    <option name="LAST_COMMIT_MESSAGE" value="server up and running on localhost 3000" />
+    <MESSAGE value="Setup eslint - prettier &amp; method on output" />
+    <MESSAGE value="Parsing query string" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parsing query string" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/12.4.0/node-typings/node_modules/@types/node/assert.d.ts">
@@ -255,20 +278,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitgnore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.prettierrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
@@ -276,10 +285,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitgnore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="709">
+          <caret line="51" column="2" lean-forward="true" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
         </state>
       </provider>
     </entry>
