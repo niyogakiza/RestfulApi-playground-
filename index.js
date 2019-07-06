@@ -1,6 +1,7 @@
 const http = require('http');
 const url = require('url');
 const { StringDecoder } = require('string_decoder');
+const config = require('./config');
 
 const server = http.createServer((req,res) => {
     const parsedUrl = url.parse(req.url,  true);
@@ -34,6 +35,7 @@ const server = http.createServer((req,res) => {
             statusCode = typeof(statusCode) === 'number' ? statusCode : 200;
             payload = typeof(payload) === 'object' ? payload : {};
             const payloadToString = JSON.stringify(payload);
+            res.setHeader('Content-Type', 'application/json');
             res.writeHead(statusCode);
             res.end(payloadToString);
             console.log(`Returning this response: ,
@@ -51,8 +53,8 @@ const router = {
     'sample': handlers.sample
 };
 
-server.listen(3000,() => {
-    console.log('Server Listening on port 3000')
+server.listen(config.PORT,() => {
+    console.log(`Server Listening on port ${config.PORT} in ${config.ENV_NAME}` )
 });
 
 
