@@ -4,6 +4,26 @@ const url = require('url');
 const { StringDecoder } = require('string_decoder');
 const config = require('./config');
 const fs = require('fs');
+const _data = require('./lib/data');
+
+
+// Testing
+// @TODO delete this
+_data.create('test', 'newFile', {'foo': 'bar'}, (err) => {
+    console.log(err);
+});
+
+// _data.read('test', 'newFile', (err, data) => {
+//     console.log(err, data);
+// });
+
+// _data.update('test', 'newFile',{'fizz': 'buzz'}, (err) => {
+//     console.log(err);
+// });
+
+// _data.delete('test', 'newFile', (err) => {
+//     console.log(err);
+// });
 
 // instantiate http server
 const httpServer = http.createServer((req,res) => {
