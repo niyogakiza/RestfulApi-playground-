@@ -2,16 +2,18 @@ const http = require('http');
 const https = require('https');
 const url = require('url');
 const { StringDecoder } = require('string_decoder');
-const config = require('./config');
+const config = require('./lib/config');
 const fs = require('fs');
 const _data = require('./lib/data');
+const handlers = require('./lib/handlers');
+const helpers = require('./lib/helpers');
 
 
 // Testing
 // @TODO delete this
-_data.create('test', 'newFile', {'foo': 'bar'}, (err) => {
-    console.log(err);
-});
+// _data.create('test', 'newFile', {'foo': 'bar'}, (err) => {
+//     console.log(err);
+// });
 
 // _data.read('test', 'newFile', (err, data) => {
 //     console.log(err, data);
@@ -39,13 +41,10 @@ const httpsServer = https.createServer(httpsServerOptions,(req,res) => {
     unifiedServer(req, res)
 });
 
-const handlers = {};
-handlers.ping = (data, callback) => {
-    callback(200)
-};
-handlers.notFound = (data, callback) => callback(404);
+
 const router = {
-    'sample': handlers.ping
+    'sample': handlers.ping,
+    'users': handlers.users
 };
 
 // Server logic for https and http
@@ -74,7 +73,7 @@ const unifiedServer = (req, res) => {
             'queryStringObject': queryStringObject,
             'method': method,
             'headers': headers,
-            'payload': buffer
+            'payload': helpers.parseJsonToObject(buffer)
         };
 
         chosenHandler(data, (statusCode, payload) => {
